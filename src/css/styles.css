@@ -1,0 +1,215 @@
+/**
+  |============================
+  | include css partials with
+  | default @import url()
+  |============================
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+address {
+  font-style: normal;
+}
+
+ul,
+ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  font-weight: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+section {
+  margin: 50px 0;
+}
+
+section a,
+button,
+.start-list a {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #fff;
+  border-radius: 8px;
+  padding: 8px 16px;
+  min-width: 95px;
+  background: #4e75ff;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  border: 0;
+}
+button {
+  min-width: 75px;
+  margin-left: 8px;
+}
+button:hover {
+  transition: background 0.3s;
+  background: #6c8cff;
+}
+button:disabled {
+  color: #989898;
+  background: #cfcfcf;
+  cursor: not-allowed;
+}
+
+#datetime-picker {
+  border: 1px solid #808080;
+  border-radius: 4px;
+  padding: 8px 16px;
+  width: 272px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+#datetime-picker,
+.delay-input:hover {
+  transition: border-color 0.3s;
+  border-color: #000000;
+}
+
+#datetime-picker,
+.delay-input:focus {
+  border-color: #4e75ff;
+  outline: none;
+}
+#datetime-picker:disabled {
+  background: #fafafa;
+  color: #808080;
+}
+
+.start-list {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.timer {
+  margin-top: 32px;
+  display: flex;
+  gap: 24px;
+}
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.value {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+.label {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #2e2f42;
+}
+
+.form-label {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+.delay-input {
+  width: 360px;
+  margin-bottom: 16px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.fieldset {
+  width: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 48px;
+  border: 1px solid rgb(128, 128, 128);
+  border-radius: 4px;
+  margin-bottom: 24px;
+}
+.legend {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+.notification-btn {
+  width: 360px;
+  height: 40px;
+  padding: 8px 16px 8px 16px;
+  border-radius: 8px;
+  background-color: rgb(78, 117, 255);
+  border: none;
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+}
+
+.fieldset-label {
+  display: flex;
+   column-gap: 4px;
+  align-items: center;
+  justify-content: center;
+  font-family: "Montserrat", sans-serif;
+font-weight: 400;
+font-size: 16px;
+line-height: 1.5;
+color: #2e2f42;
+}
+
+.fieldset input {
+  width: 20px;
+  height: 20px;
+}
