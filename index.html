@@ -4,27 +4,30 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Home work 11</title>
+	<title>Home work 12</title>
 	
 
-  <script type="module" crossorigin src="/goit-js-hw-11/commonHelpers.js"></script>
-  <link rel="modulepreload" crossorigin href="/goit-js-hw-11/assets/vendor-5b791d57.js">
-  <link rel="stylesheet" href="/goit-js-hw-11/assets/vendor-cf6910df.css">
-  <link rel="stylesheet" href="/goit-js-hw-11/assets/index-3e190760.css">
+  <script type="module" crossorigin src="/goit-js-hw-12/commonHelpers.js"></script>
+  <link rel="modulepreload" crossorigin href="/goit-js-hw-12/assets/vendor-95dc692e.js">
+  <link rel="stylesheet" href="/goit-js-hw-12/assets/vendor-cf6910df.css">
+  <link rel="stylesheet" href="/goit-js-hw-12/assets/index-fdae0f24.css">
 </head>
 
 <body>
-<main>
-	<form class="search-form">
-		<label class="input-label-search-form visually-hidden" for="search-input">
-			Search
-		</label>
-		<input class="search-input-form" type="text" name="search" id="search-input" placeholder="Search images..." />
-		<button class="btn-search-form" type="submit">Search</button>
+	<main>
+	<form class="form">
+		<input class="input" type="text" placeholder="Search images..." name="request" required />
+	
+		<button type="submit" class="submit btn">Search</button>
 	</form>
 	<div class="loader"></div>
 	<ul class="gallery"></ul>
-</main>
+	<div class="loarMoreContainer">
+		<button type="button" class="loadMore btn">Load more</button>
+	</div>
+
+
+	</main>
 
 	
 </body>
