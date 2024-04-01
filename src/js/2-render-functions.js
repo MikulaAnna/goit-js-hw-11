@@ -1,36 +1,45 @@
-import { lightbox, gallery } from '../main';
+import { refs, lightbox } from '../main.js';
 
-import iziToast from 'izitoast';
-import 'izitoast/dist/css/iziToast.min.css';
+function imageTemplate({
+  webformatURL,
+  largeImageURL,
+  tags,
+  likes,
+  views,
+  comments,
+  downloads,
+}) {
+  return `<li class="gallery-item">
+          <a class="gallery-link" href="${webformatURL}">
+        <img loading="lazy" class="gallery-image" src="${largeImageURL}" alt="${tags}" />
+      </a>
+        <div class="image-info">
+    <ul class="infoBlock">
+    <li class="title">Likes</li>
+    <li class="info">${likes}</li>
+    </ul>
+    <ul class="infoBlock">
+    <li class="title">Views</li>
+    <li class="info">${views}</li>
+    </ul>
+    <ul class="infoBlock">
+    <li class="title">Comments</li>
+    <li class="info">${comments}</li>
+    </ul>
+    <ul class="infoBlock">
+    <li class="title">Downloads</li>
+    <li class="info">${downloads}</li>
+    </ul>
+    </div>
+  </li>`;
+}
 
-export function renderImages(data) {
-  if (data.hits.length == 0) {
-    iziToast.error({
-      message:
-        'Sorry, there are no images matching your search query. Please try again!',
-      theme: 'dark',
-      progressBarColor: '#FFFFFF',
-      color: '#EF4040',
-      position: 'topRight',
-    });
-  } else {
-    const markup = data.hits
-      .map(photo => {
-        return `<li class="photos-list-item">
-            <a class="photos-list-link" href="${photo.largeImageURL}">
-            <img class="photo" src="${photo.webformatURL}" alt="${photo.tags}"/>
-            </a>
-            <ul class="photo-information-container">
-            <li class="item-photo-information-container"><p><span class="accent">Likes</span></br>${photo.likes}</p></li>
-            <li class="item-photo-information-container"><p><span class="accent">Views</span></br>${photo.views}</p></li>
-            <li class="item-photo-information-container"><p><span class="accent">Comments</span></br>${photo.comments}</p></li>
-            <li class="item-photo-information-container"><p><span class="accent">Downloads</span></br>${photo.downloads}</p></li>
-            </ul>
-            </li>`;
-      })
-      .join('');
-    gallery.insertAdjacentHTML('beforeend', markup);
+function imagesTemplate(arr) {
+  return arr.map(imageTemplate).join('');
+}
 
-    lightbox.refresh();
-  }
+export function renderGallery(arr) {
+  const markup = imagesTemplate(arr);
+  refs.gallery.insertAdjacentHTML('beforeend', markup);
+  lightbox.refresh();
 }
